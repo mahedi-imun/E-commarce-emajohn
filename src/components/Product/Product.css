@@ -38,6 +38,6 @@
   box-sizing: border-box;
   border-radius: 0px 0px 8px 8px;
 }
-.product-card button:hover{
-    background-color: orange;
+.product-card button:hover {
+  background-color: orange;
 }
