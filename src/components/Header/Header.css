@@ -1,17 +1,17 @@
-.nav-header{
-    height: 80px;
-    background-color: #1C2B35;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:0 140px  0 140px;
+.nav-header {
+  height: 80px;
+  background-color: #1c2b35;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 140px 0 140px;
 }
 .nav-header a {
-    text-decoration: none;
-    color: #ffff;
-    padding: 5px 10px;
-    font-size: 17px;
+  text-decoration: none;
+  color: #ffff;
+  padding: 5px 10px;
+  font-size: 17px;
 }
-.nav-header a:hover{
-    color: #d8d3d3;
+.nav-header a:hover {
+  color: #d8d3d3;
 }
