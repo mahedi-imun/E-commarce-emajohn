@@ -1,4 +1,5 @@
 import React from 'react';
+import { ShoppingCartIcon} from '@heroicons/react/solid'
 import './Product.css'
 const Product = (props) => {
 
@@ -12,7 +13,8 @@ const Product = (props) => {
                 <p><small>Manufacturer :{seller}</small></p>
                 <p><small>ratings:{ratings}</small></p>
             </div>
-            <button onClick={() => props.addToCartHandler(props.product)} >Add to Cart </button>
+            <button onClick={() => props.addToCartHandler(props.product)} >Add to Cart <span><ShoppingCartIcon className='icon'/></span></button>
+
         </div>
     );
 };

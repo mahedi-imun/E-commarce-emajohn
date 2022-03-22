@@ -7,12 +7,12 @@
   position: relative;
   padding: 5px;
   box-sizing: border-box;
-  margin-top: 100px;
+  margin-left: 20px;
 }
 .product-card img {
   height: 286px;
   width: 100%;
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 .card-body {
   margin-top: -25px;
@@ -25,6 +25,7 @@
   color: #0e161a;
 }
 .product-card button {
+  font-size: 18px;
   width: 300px;
   height: 48px;
   border: none;
@@ -40,4 +41,9 @@
 }
 .product-card button:hover {
   background-color: orange;
+}
+.icon{
+  width: 20px;
+  height: 20px;
+  margin: 0;
 }
