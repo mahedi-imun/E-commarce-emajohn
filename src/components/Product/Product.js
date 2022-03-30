@@ -9,7 +9,7 @@ const Product = (props) => {
             <img src={img} alt="" />
             <div className="card-body">
                 <p>{name.slice(0, 20)}</p>
-                <p>price:{price}</p>
+                <p>price: ${price}</p>
                 <p><small>Manufacturer :{seller}</small></p>
                 <p><small>ratings:{ratings}</small></p>
             </div>

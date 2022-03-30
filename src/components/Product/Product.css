@@ -13,14 +13,14 @@
   margin-bottom: 5px;
 }
 .card-body {
-  margin-top: -25px;
-  margin-bottom: -25px;
+  margin-top: 5px;
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
   font-size: 21px;
   letter-spacing: 0.0015em;
   color: #0e161a;
+  padding :0 5px;
 }
 .product-card button {
   font-size: 18px;
