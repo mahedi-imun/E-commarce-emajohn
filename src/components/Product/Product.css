@@ -1,14 +1,11 @@
 .product-card {
   height: 508px;
   width: 300px;
-  border: 1px solid #95a0a7;
   box-sizing: border-box;
+  box-shadow: 0px 0px 11px 7px rgba(121,121,121,0.31);
   border-radius: 8px;
   position: relative;
   padding: 5px;
-  box-sizing: border-box;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 .product-card img {
   height: 286px;
@@ -35,10 +32,10 @@
   right: 0%;
   top: 90.75%;
   bottom: -0.2%;
-  background: #ffe0b3;
-  border: 1px solid #95a0a7;
+  background: #fcbe62;
   box-sizing: border-box;
   border-radius: 0px 0px 8px 8px;
+  margin-left: 0;
 }
 .product-card button:hover {
   background-color: orange;
