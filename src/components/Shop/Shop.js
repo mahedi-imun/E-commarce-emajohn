@@ -1,9 +1,11 @@
 
+import { Link } from 'react-router-dom';
 import useCart from '../../hooks/useCart';
 import useProducts from '../../hooks/useProducts';
 import { addToDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
+import { ArrowRightIcon } from '@heroicons/react/solid'
 import './Shop.css'
 const Shop = () => {
     const [products, setProduct] = useProducts()
@@ -35,7 +37,15 @@ const Shop = () => {
                 }
             </div>
             <div className="order-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart}>
+                    <Link to='/Orders'>
+                        <div className='card-btn-container'>
+                            <button className='card-btn'
+                            >Review Order <span><ArrowRightIcon className='icon'></ArrowRightIcon></span>
+                            </button>
+                        </div>
+                    </Link>
+                </Cart>
             </div>
         </div>
     );

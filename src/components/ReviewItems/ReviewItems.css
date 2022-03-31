@@ -1,0 +1,42 @@
+.review-Item-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.review-Item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 107px;
+  width: 571px;
+  border: 1px solid #95a0a7;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.review-Item img {
+  width: 85px;
+  height: 85px;
+  margin: 0 20px 0 8px;
+  border-radius: 6px;
+}
+.review-item-info {
+  display: flex;
+}
+.review-Item .trash-icon {
+  height: 37px;
+  width: 37px;
+  color: #eb5757;
+  border-radius: 50%;
+}
+.review-item-info .orange-color {
+  color: #ff9900;
+}
+.trash-btn {
+  border: none;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  background-color: #eb57574d;
+  margin-right: 26px;
+  cursor: pointer;
+}

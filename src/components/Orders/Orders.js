@@ -1,15 +1,43 @@
 import React from 'react';
 import useCart from '../../hooks/useCart';
 import useProducts from '../../hooks/useProducts';
-
+import { removeFromDb } from '../../utilities/fakedb';
+import Cart from '../Cart/Cart';
+import ReviewItems from '../ReviewItems/ReviewItems';
+import { CreditCardIcon } from '@heroicons/react/solid'
 const Orders = () => {
-    const [products , setProducts]= useProducts()
-    const [cart , setCart]= useCart(products)
+    const [products, setProducts] = useProducts()
+    const [cart, setCart] = useCart(products)
+    const handleDEleteProduct = (deleteProduct) => {
+        const rest = cart.filter(pd => pd.id !== deleteProduct.id)
+        setCart(rest)
+        removeFromDb(deleteProduct.id)
+    }
     return (
-        <div>
-            <h3>This is orders{products.length}</h3>
-            <h2>cart{cart.length}</h2>
-            
+        <div className='shop-container'>
+            <div className='review-Item-container'>
+                {
+                    cart.map(pd => <ReviewItems
+                        key={pd.id}
+                        product={pd}
+                        handleDEleteProduct={handleDEleteProduct}
+                    ></ReviewItems>)
+                }
+            </div>
+            <div className='order-container'>
+                <Cart cart={cart}>
+                    <div className='card-btn-container'>
+                        <button className='card-btn'>
+                            Proceed Checkout
+                            <span>
+                                <CreditCardIcon className='icon'></CreditCardIcon>
+                            </span>
+                        </button>
+                    </div>
+                </Cart>
+            </div>
+
+
         </div>
     );
 };
