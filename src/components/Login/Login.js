@@ -1,28 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Login.css'
+import styles from './Login.module.css'
 const Login = () => {
     return (
-        <div className='form-body'>
-            <div className='form-background'>
-                <div className='form-content'>
-                    <h3 className='form-title'>Login</h3>
+        <div className={styles.formBody}>
+            <div className={styles.formBackground}>
+                <div className={styles.formContent}>
+                    <h3 className={styles.formTitle}>Login</h3>
                     <form >
                         <label htmlFor="email">Email</label>
-                        <input type="email" name="email" />
-                        <label htmlFor="password">Password</label>
+                        <input required type="email" name="email" />
+                        <label required htmlFor="password">Password</label>
                         <input type="password" name='password' />
-                        <input className='submit-btn' type="submit" value="Login" />
+                        <input className={styles.submitBtn} type="submit" value="Login" />
                     </form>
                     <p>
                         New to Ema-john? <Link to="/signup">Create New Account</Link>
                     </p>
-                    <div className='or-container'>
+                    <div className={styles.orContainer}>
                         <hr />
                         <h3>or</h3>
                         <hr />
                     </div>
-                    <div className='form-google-btn'
+                    <div className={styles.formGoogleBtn}
 
                     >
                         <button >

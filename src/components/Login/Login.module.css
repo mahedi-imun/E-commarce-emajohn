@@ -1,0 +1,111 @@
+.formBody {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+  }
+  .formBackground {
+    background-color: #ffe0b3;
+    height: 600px;
+    width: 500px;
+    border-radius: 8px;
+    position: absolute;
+  }
+  .formContent {
+    width: 500px;
+    height: 600px;
+    background: #ffffff;
+    border: 1px solid #95a0a7;
+    box-sizing: border-box;
+    border-radius: 8px;
+    position: absolute;
+    left: 12px;
+    top: -12px;
+  }
+  .formTitle {
+    text-align: center;
+    margin-top: 38px;
+    margin-bottom: 10px;
+    color: #2a414f;
+    font-weight: 400;
+    font-size: 35px;
+  }
+  form {
+    width: 415px;
+    margin: 0 auto;
+  }
+  form label {
+    display: block;
+    margin-bottom: 2px;
+    margin-left: 2px;
+    color: #95a0a7;
+  }
+  form input {
+    width: 100%;
+    height: 55px;
+    margin-bottom: 44px;
+    color: #2a414f;
+    font-size: 24px;
+    border: 1px solid #95a0a7;
+    border-radius: 5px;
+  }
+  form .submitBtn {
+    background-color: #ff99004d;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #0e161a;
+    font-weight: 400;
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+  form .submitBtn:hover {
+    background-color: #ffa928;
+  }
+  .formContent p {
+    text-align: center;
+    color: #2a414f;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  .formContent a {
+    color: #ff9900;
+    text-decoration: none;
+  }
+  .formContent .orContainer {
+    display: flex;
+    justify-content: center;
+  }
+  .formContent hr {
+    width: 145px;
+    border: none;
+    border-top: 1px solid #95a0a7;
+    margin-top: 20px;
+  }
+  .formContent .orContainer h3 {
+    padding: 5px;
+    font-weight: 400;
+    font-size: 17px;
+  }
+  .formGoogleBtn {
+    width: 415px;
+    margin: 30px auto;
+  }
+  .formGoogleBtn button {
+    width: 100%;
+    height: 55px;
+    border: 1px solid #95a0a7;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+  }
+  .formGoogleBtn button:hover {
+    background-color: #e0e6eb;
+    cursor: pointer;
+  }
+  
