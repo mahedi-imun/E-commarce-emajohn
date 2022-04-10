@@ -1,1 +1,2 @@
-# Getting Started Project e-commerce
+#  ema-john e-commerce
+

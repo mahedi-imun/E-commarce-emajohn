@@ -19,7 +19,7 @@ const Header = () => {
                 <Link to="/inventory">Manage Inventory</Link>
                 {
                     user?
-                    <button onClick={()=>logOut()}>log out</button>
+                    <button className='header-btn' onClick={()=>logOut()}>log out</button>
                     :
                     <Link to="/login">Login</Link>}
             </div>
