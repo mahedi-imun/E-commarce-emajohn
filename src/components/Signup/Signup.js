@@ -1,23 +1,35 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Signup.css'
-const Signup = () => {
-    const [email,setEmail]= useState('')
-    const [password,setPassword]= useState('')
-    const [confirmPass, setConfirmPass]= useState('')
-    const [error,setError]= useState('')
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
-    const handleEmail = (e)=>{
-       setEmail(e.target.value)
+const Signup = () => {
+    const navigate = useNavigate()
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [confirmPass, setConfirmPass] = useState('')
+    const [myError, setError] = useState('')
+    const [createUserWithEmailAndPassword, error, user] =   useCreateUserWithEmailAndPassword(auth);
+    if (error) {
+        setError(error)
     }
-    const handlePass = (e)=>{
+    if (user) {
+        navigate('/shop') 
+    }
+    const handleEmail = (e) => {
+        setEmail(e.target.value)
+    }
+    const handlePass = (e) => {
         setPassword(e.target.value)
     }
-    const handleConfirmPass = (e)=>{
+    const handleConfirmPass = (e) => {
         setConfirmPass(e.target.value)
     }
-    const handleCreateUser =(event)=>{
+    const handleCreateUser = (event) => {
         event.preventDefault()
+        createUserWithEmailAndPassword(email, password)
 
     }
     return (

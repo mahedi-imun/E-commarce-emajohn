@@ -5,7 +5,9 @@ import { removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import ReviewItems from '../ReviewItems/ReviewItems';
 import { CreditCardIcon } from '@heroicons/react/solid'
+import { useNavigate } from 'react-router-dom';
 const Orders = () => {
+    const navigate = useNavigate()
     const [products, setProducts] = useProducts()
     const [cart, setCart] = useCart(products)
     const handleDEleteProduct = (deleteProduct) => {
@@ -27,7 +29,9 @@ const Orders = () => {
             <div className='order-container'>
                 <Cart cart={cart}>
                     <div className='card-btn-container'>
-                        <button className='card-btn'>
+                        <button
+                        onClick={()=>navigate('/inventory')}
+                         className='card-btn'>
                             Proceed Checkout
                             <span>
                                 <CreditCardIcon className='icon'></CreditCardIcon>
