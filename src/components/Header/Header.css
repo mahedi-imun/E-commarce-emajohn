@@ -1,11 +1,19 @@
 .nav-header {
   height: 80px;
+  width: 100%;
   background-color: #1c2b35;
+  
+}
+.header-items{
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 140px 0 140px;
+  justify-content:space-around;
+  
 }
+
 .nav-header a {
   text-decoration: none;
   color: #ffff;
@@ -25,4 +33,9 @@
 }
 .header-btn:hover{
   background-color: #FF9900;
+}
+@media only screen and (max-width: 600px) {
+  .header-items img{
+    display: none;
+  }
 }

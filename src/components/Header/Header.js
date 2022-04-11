@@ -12,7 +12,8 @@ const Header = () => {
     }
     return (
         <nav className='nav-header'>
-            <img src={logo} alt="emajohnlogo" />
+            <div className='header-items'>
+            <div className='header-img'><img src={logo} alt="ema-john-logo" /></div>
             <div>
                 <Link to="/Shop">Shop</Link>
                 <Link to="/Orders">Order review</Link>
@@ -22,6 +23,7 @@ const Header = () => {
                     <button className='header-btn' onClick={()=>logOut()}>log out</button>
                     :
                     <Link to="/login">Login</Link>}
+            </div>
             </div>
         </nav>
     );

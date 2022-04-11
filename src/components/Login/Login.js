@@ -4,11 +4,12 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import styles from './Login.module.css'
 const Login = () => {
+
     const location = useLocation()
     const navigate = useNavigate()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [signInWithEmailAndPassword, user, loading, error,] =
+    const [signInWithEmailAndPassword, user, error,] =
         useSignInWithEmailAndPassword(auth);
     const from = location.state?.from?.pathname || "/"
 
@@ -38,7 +39,7 @@ const Login = () => {
                         <input onBlur={handleEmail} required type="email" name="email" />
                         <label required htmlFor="password">Password</label>
                         <input onBlur={handlePass} type="password" name='password' />
-                        <p className={{color:"red"}}>{error?.message}</p>
+                        <p className={{ color: "red" }}>{error?.message}</p>
                         <input className={styles.submitBtn} type="submit" value="Login" />
                     </form>
                     <p>

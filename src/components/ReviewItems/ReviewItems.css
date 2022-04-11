@@ -40,3 +40,8 @@
   margin-right: 26px;
   cursor: pointer;
 }
+@media only screen and (max-width: 600px) {
+  .review-Item-container{
+    width: 80%;
+  }
+}
