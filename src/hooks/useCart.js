@@ -6,7 +6,7 @@ const useCart = (products) => {
         const getStorageCart = getLocalStorageItem();
         const savedCart = [];
         for (let id in getStorageCart) {
-            const addedProduct = products.find(product => product.id === id);
+            const addedProduct = products.find(product => product._id === id);
             if (addedProduct) {
                 const quantity = getStorageCart[id]
                 addedProduct.quantity = quantity

@@ -11,16 +11,16 @@ const Orders = () => {
     const [products, setProducts] = useProducts()
     const [cart, setCart] = useCart(products)
     const handleDEleteProduct = (deleteProduct) => {
-        const rest = cart.filter(pd => pd.id !== deleteProduct.id)
+        const rest = cart.filter(pd => pd._id !== deleteProduct._id)
         setCart(rest)
-        removeFromDb(deleteProduct.id)
+        removeFromDb(deleteProduct._id)
     }
     return (
         <div className='shop-container'>
             <div className='review-Item-container'>
                 {
                     cart.map(pd => <ReviewItems
-                        key={pd.id}
+                        key={pd._id}
                         product={pd}
                         handleDEleteProduct={handleDEleteProduct}
                     ></ReviewItems>)
@@ -30,8 +30,8 @@ const Orders = () => {
                 <Cart cart={cart}>
                     <div className='card-btn-container'>
                         <button
-                        onClick={()=>navigate('/shipping')}
-                         className='card-btn'>
+                            onClick={() => navigate('/shipping')}
+                            className='card-btn'>
                             Proceed Checkout
                             <span>
                                 <CreditCardIcon className='icon'></CreditCardIcon>
