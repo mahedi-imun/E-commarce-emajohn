@@ -13,6 +13,17 @@
     background-color: rgba(255, 153, 0, 0.3);
     /* flex: 10%; */
 }
+.pagination-btn button{
+    background-color: #fff;
+    border: 1px solid #FF9900 ;
+    color: #FF9900;
+    margin: 0 3px;
+    cursor: pointer;
+}
+.pagination-btn .active{
+    background-color: #FF9900;
+    color: #fff;
+}
 @media only screen and (max-width: 600px) {
     .product-container{
         grid-template-columns: repeat(1,1fr);
